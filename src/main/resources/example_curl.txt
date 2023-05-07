@@ -1,0 +1,20 @@
+curl --request POST \
+  --url http://localhost:8337/person \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "lastName": "Komova",
+	"firstName": "Mosya",
+  "middleName": "Evgenyevna",
+  "birthDate": "19.07.2001",
+  "registrationAddress": {
+    "value": "Улица Пушкина, дом Колотушкина"
+  },
+  "residentialAddresses": [
+    {
+      "value": "Улица Ленина, дом 5"
+    },
+    {
+      "value": "Проспект Вернадского, дом 17"
+    }
+  ]
+}'
