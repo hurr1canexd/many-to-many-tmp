@@ -1,6 +1,5 @@
 package me.example.person.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -14,6 +13,4 @@ public class AddressDto {
 
     private String value;
 
-    @JsonProperty("region")
-    private String regionName;
 }

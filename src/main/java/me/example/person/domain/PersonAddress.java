@@ -1,6 +1,5 @@
 package me.example.person.domain;
 
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -20,12 +19,10 @@ public class PersonAddress {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("personId")
-//    @JoinColumn(name = "person_id") // fixme нужно ли? у Михалчи нету
     private Person person;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("addressId")
-//    @JoinColumn(name = "address_id")
     private Address address;
 
     private boolean registration;

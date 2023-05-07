@@ -6,7 +6,6 @@ import lombok.Setter;
 import org.hibernate.Hibernate;
 
 import javax.persistence.*;
-import java.sql.Date;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -43,9 +42,6 @@ public class Person {
     private List<PersonAddress> addresses = new ArrayList<>();
 
     public void addAddress(Address address, boolean registration) {
-//        if (address == null) {
-//            return;
-//        }
         PersonAddress personAddress = new PersonAddress(this, address, registration);
         addresses.add(personAddress);
         address.getPeople().add(personAddress);

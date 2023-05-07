@@ -1,18 +1,17 @@
 package me.example.person.mapper;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import me.example.person.domain.Address;
-import me.example.person.domain.Region;
 import me.example.person.dto.AddressDto;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class AddressMapper {
-
-    private AddressMapper() {}
 
     public static Address dto2Entity(AddressDto dto) {
         Address entity = new Address();
         entity.setId(dto.getId());
         entity.setValue(dto.getValue());
-//        entity.setRegion(new Region(dto.getRegionName()));
 
         return entity;
     }
@@ -21,7 +20,6 @@ public class AddressMapper {
         AddressDto dto = new AddressDto();
         dto.setId(entity.getId());
         dto.setValue(entity.getValue());
-//        dto.setRegionName(entity.getRegion().getName());
 
         return dto;
     }
