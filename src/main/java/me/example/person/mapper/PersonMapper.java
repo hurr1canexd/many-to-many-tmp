@@ -1,17 +1,17 @@
 package me.example.person.mapper;
 
-import me.example.person.domain.Person;
-import me.example.person.domain.PersonAddress;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import me.example.person.dto.AddressDto;
 import me.example.person.dto.PersonDto;
+import me.example.person.entity.Person;
+import me.example.person.entity.PersonAddress;
 
 import java.util.List;
 import java.util.Optional;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class PersonMapper {
-
-    private PersonMapper() {
-    }
 
     public static Person dto2Entity(PersonDto dto) {
         Person entity = new Person();

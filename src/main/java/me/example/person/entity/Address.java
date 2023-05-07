@@ -1,6 +1,5 @@
-package me.example.person.domain;
+package me.example.person.entity;
 
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

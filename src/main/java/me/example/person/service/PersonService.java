@@ -4,19 +4,17 @@ import lombok.RequiredArgsConstructor;
 import me.example.person.dao.AddressRepository;
 import me.example.person.dao.PersonAddressRepository;
 import me.example.person.dao.PersonRepository;
-import me.example.person.domain.Address;
-import me.example.person.domain.Person;
-import me.example.person.domain.PersonAddress;
 import me.example.person.dto.PersonDto;
+import me.example.person.entity.Address;
+import me.example.person.entity.Person;
+import me.example.person.entity.PersonAddress;
 import me.example.person.mapper.AddressMapper;
 import me.example.person.mapper.PersonMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
